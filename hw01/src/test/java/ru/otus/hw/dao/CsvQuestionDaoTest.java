@@ -21,8 +21,6 @@ class CsvQuestionDaoTest {
         answerList.add(new Answer("Certainly. The red UFO is from Mars. And green is from Venus", false));
         answerList.add(new Answer("Absolutely not", false));
         Question expectedQuestion = new Question("Is there life on Mars?", answerList);
-        List<Question> expectedQuestionList = new ArrayList<>();
-        expectedQuestionList.add(expectedQuestion);
         var testQuestion = dao.findAll().get(0);
 
         Assertions.assertEquals(expectedQuestion.text(), testQuestion.text());
